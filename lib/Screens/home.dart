@@ -1,3 +1,4 @@
+import 'package:eventapp/Screens/details.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer_image/shimmer_image.dart';
@@ -11,15 +12,17 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List<String> l= ["https://res.cloudinary.com/dvhlfyvrr/image/upload/v1697369241/Pet%20Life/Data/Mother_s_Day_rrfryj.png",
- "https://res.cloudinary.com/dvhlfyvrr/image/upload/v1697369241/Pet%20Life/Data/jazz_fjheb3.png",
- "https://res.cloudinary.com/dvhlfyvrr/image/upload/v1697369241/Pet%20Life/Data/Mother_s_Day_rrfryj.png",
- "https://res.cloudinary.com/dvhlfyvrr/image/upload/v1697369241/Pet%20Life/Data/jazz_fjheb3.png",
- "https://res.cloudinary.com/dvhlfyvrr/image/upload/v1697369241/Pet%20Life/Data/International_Kids_Safe_mwyprw.png",
- "https://res.cloudinary.com/dvhlfyvrr/image/upload/v1697369241/Pet%20Life/Data/Mother_s_Day_rrfryj.png",
- "https://res.cloudinary.com/dvhlfyvrr/image/upload/v1697369241/Pet%20Life/Data/jazz_fjheb3.png",
- "https://res.cloudinary.com/dvhlfyvrr/image/upload/v1697369241/Pet%20Life/Data/International_Kids_Safe_mwyprw.png",
- "https://res.cloudinary.com/dvhlfyvrr/image/upload/v1697369241/Pet%20Life/Data/International_Kids_Safe_mwyprw.png"];
+  List<String> l = [
+    "https://res.cloudinary.com/dvhlfyvrr/image/upload/v1697369241/Pet%20Life/Data/Mother_s_Day_rrfryj.png",
+    "https://res.cloudinary.com/dvhlfyvrr/image/upload/v1697369241/Pet%20Life/Data/jazz_fjheb3.png",
+    "https://res.cloudinary.com/dvhlfyvrr/image/upload/v1697369241/Pet%20Life/Data/Mother_s_Day_rrfryj.png",
+    "https://res.cloudinary.com/dvhlfyvrr/image/upload/v1697369241/Pet%20Life/Data/jazz_fjheb3.png",
+    "https://res.cloudinary.com/dvhlfyvrr/image/upload/v1697369241/Pet%20Life/Data/International_Kids_Safe_mwyprw.png",
+    "https://res.cloudinary.com/dvhlfyvrr/image/upload/v1697369241/Pet%20Life/Data/Mother_s_Day_rrfryj.png",
+    "https://res.cloudinary.com/dvhlfyvrr/image/upload/v1697369241/Pet%20Life/Data/jazz_fjheb3.png",
+    "https://res.cloudinary.com/dvhlfyvrr/image/upload/v1697369241/Pet%20Life/Data/International_Kids_Safe_mwyprw.png",
+    "https://res.cloudinary.com/dvhlfyvrr/image/upload/v1697369241/Pet%20Life/Data/International_Kids_Safe_mwyprw.png"
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,7 +80,7 @@ class _HomeState extends State<Home> {
                   child: Text(
                     "See All",
                     style: TextStyle(
-                        color: Color(0xff90CAF9),
+                        color: Color(0xff34A853),
                         fontFamily: "ProductSans-Regular",
                         fontSize: 12),
                   ),
@@ -88,96 +91,96 @@ class _HomeState extends State<Home> {
               height: 20,
             ),
             ListView.builder(
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            itemCount: l.length,
-            itemBuilder: (context,index){
-
-            return Container(
-            width: MediaQuery.of(context).size.width / 1.5,
-            decoration: BoxDecoration(),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Image.network(
-                     l[index],
-                      width: MediaQuery.of(context).size.width / 4,
-                      height: MediaQuery.of(context).size.width / 4,
-fit: BoxFit.cover,
-                      //imageError: 'assets/images/noimage.jpeg',
-                      // fit: BoxFit.contain,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width / 1.8,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Text(
-                          "1ST -MAY -SAT-2:00 PM",
-                          style: TextStyle(
-                              color: Color(0xff2196F3),
-                              fontFamily: "ProductSans-Regular",
-                              fontSize: 12),
-                        ),
-                        Text(
-                          "Event Namevent Namevent..",
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontFamily: "ProductSans-Regular",
-                              fontSize: 16),
-                        ),
-                        SizedBox(
-                          height: 40,
-                          child: ElevatedButton(
-                            
-                            onPressed: () {
-                              // Add your action here
-              //                  Navigator.push(
-              // context,
-              // MaterialPageRoute(builder: (context) => Register()),
-           // );
-                            },
-                            style: ButtonStyle(
-                              backgroundColor:
-                                  MaterialStateProperty.all(Colors.black),
-                              shape: MaterialStateProperty.all(
-                                RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                ),
-                              ),
-                            ),
-                            child: Text(
-                              'Register',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 14.0,
-                              ),
+                shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
+                itemCount: l.length,
+                itemBuilder: (context, index) {
+                  return Container(
+                    width: MediaQuery.of(context).size.width / 1.5,
+                    decoration: BoxDecoration(),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: Image.network(
+                              l[index],
+                              width: MediaQuery.of(context).size.width / 4,
+                              height: MediaQuery.of(context).size.width / 4,
+                              fit: BoxFit.cover,
+                              //imageError: 'assets/images/noimage.jpeg',
+                              // fit: BoxFit.contain,
                             ),
                           ),
-                        ),
-                      ],
+                          SizedBox(
+                            width: 20,
+                          ),
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width / 1.8,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                Text(
+                                  "1ST -MAY -SAT-2:00 PM",
+                                  style: TextStyle(
+                                      color: Color(0xff2196F3),
+                                      fontFamily: "ProductSans-Regular",
+                                      fontSize: 12),
+                                ),
+                                Text(
+                                  "Event Namevent Namevent..",
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontFamily: "ProductSans-Regular",
+                                      fontSize: 16),
+                                ),
+                                SizedBox(
+                                  height: 40,
+                                  child: ElevatedButton(
+                                    onPressed: () {
+                                      // Add your action here
+                                       Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (context) => Details()),
+                                      );
+                                    },
+                                    style: ButtonStyle(
+                                      backgroundColor:
+                                          MaterialStateProperty.all(
+                                              Colors.black),
+                                      shape: MaterialStateProperty.all(
+                                        RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
+                                      ),
+                                    ),
+                                    child: Text(
+                                      'Register',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 14.0,
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
-                  )
-                ],
-              ),
-            ),
-          );
-          }),
+                  );
+                }),
             // Container(
             //   width: MediaQuery.of(context).size.width / 1.5,
             //   decoration: BoxDecoration(),
             //   child: Padding(
             //     padding: const EdgeInsets.all(8.0),
             //     child: Row(
-                  
+
             //       children: [
             //         ClipRRect(
             //           borderRadius: BorderRadius.circular(40),
